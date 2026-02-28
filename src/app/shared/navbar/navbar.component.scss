@@ -1,3 +1,4 @@
+/* --- Header e Layout Geral --- */
 header {
   display: flex;
   justify-content: space-between;
@@ -27,4 +28,108 @@ nav>ul {
   font-weight: 500;
   font-size: 16px;
   text-decoration: underline;
+}
+
+.dehaze {
+  display: none;
+  cursor: pointer;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* --- Drawer (Menu Lateral) --- */
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+
+  /* Estados iniciais para animação */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+.drawer-backdrop.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1000;
+
+  /* Transição de entrada da esquerda */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer.active {
+  transform: translateX(0);
+}
+
+.drawer>ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+.drawer>ul>li {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-denunciar {
+  display: block;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  header {
+    padding: 8px 0;
+  }
+
+  nav>ul {
+    display: none;
+  }
+
+  .titulo>h1 {
+    font-size: 20px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dehaze {
+    display: block;
+  }
+
+  .btn-denunciar {
+    display: none;
+  }
 }

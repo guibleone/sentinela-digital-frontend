@@ -1,6 +1,6 @@
 <header class="max-width">
   <div class="titulo">
-    <img ngSrc="icons/lock.svg" width="30" height="30" />
+    <img class="logo" ngSrc="icons/lock.svg" width="30" height="30" />
     <h1>Sentinela Digital</h1>
   </div>
   <nav>
@@ -10,5 +10,29 @@
       }
     </ul>
   </nav>
-  <button class="button btn-secondary">Denunciar</button>
+  <div class="acoes">
+    <button class="button btn-secondary btn-denunciar">Denunciar</button>
+    <img (click)="toggleDrawer()" class="dehaze" ngSrc="icons/dehaze.svg" width="30" height="30" />
+  </div>
+  <ng-container *ngTemplateOutlet="drawer"></ng-container>
 </header>
+
+<ng-template #drawer>
+  <div class="drawer-backdrop" [class.active]="isDrawerOpen" (click)="toggleDrawer()">
+    <div class="drawer" [class.active]="isDrawerOpen">
+      <div class="titulo">
+        <img class="logo" ngSrc="icons/lock.svg" width="30" height="30" />
+        <h1>Sentinela Digital</h1>
+      </div>
+      <ul>
+        @for (link of navLinks; track $index) {
+        <li>
+          <img class="icon" [ngSrc]="link.icon" width="20" height="20" />
+          <a class="link" [routerLink]="link.path">{{link.titulo}}</a>
+        </li>
+        }
+      </ul>
+      <button class="button btn-secondary">Denunciar</button>
+    </div>
+  </div>
+</ng-template>

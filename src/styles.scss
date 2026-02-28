@@ -86,3 +86,14 @@ h6 {
   max-width: 80vw;
   margin: auto;
 }
+
+@media (max-width: 768px) {
+  .max-width {
+    max-width: 90vw;
+  }
+  .button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
