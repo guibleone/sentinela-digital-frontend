@@ -1,59 +1,80 @@
-# Frontend
+# Sentinela Digital - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+Frontend da plataforma **Sentinela Digital**, uma aplicação para denúncias, monitoramento digital de segurança e notícias.
 
-## Development server
+## Domínio Provisório
 
-To start a local development server, run:
-
-```bash
-ng serve
+A aplicação está disponível em:
+```
+https://jolly-mud-00b9b361e.6.azurestaticapps.net
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologias
 
-## Code scaffolding
+- **Angular 19** - Framework frontend
+- **TypeScript** - Linguagem de programação
+- **SCSS** - Pré-processador CSS
+- **Angular CLI** - Ferramentas de scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Pré-requisitos
 
-```bash
-ng generate component component-name
-```
+- Node.js (v18+)
+- npm ou yarn
+- Angular CLI 19+
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+##  Instalação
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+##  Desenvolvimento
 
-## Running unit tests
+Para iniciar o servidor de desenvolvimento:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+```bash
+ng run des
+```
 
+Acesse `http://localhost:4200/` no seu navegador. A aplicação será recarregada automaticamente ao detectar mudanças nos arquivos.
+
+## Comandos Úteis
+
+### Gerar componente
+```bash
+ng generate component nome-componente
+```
+
+### Gerar serviço
+```bash
+ng generate service nome-servico
+```
+
+### Build para produção
+```bash
+ng build --configuration production
+```
+
+### Rodar testes unitários
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+### Rodar testes e2e
 ```bash
 ng e2e
 ```
+                      
+## Recursos Adicionais
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- [Documentação Angular](https://angular.dev)
+- [Angular CLI](https://angular.dev/tools/cli)
+- [TypeScript](https://www.typescriptlang.org)
 
-## Additional Resources
+## Contribuindo
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para contribuir, abra uma issue ou pull request no repositório.
+
+## Licença
+
+Este projeto está sob a licença MIT.
