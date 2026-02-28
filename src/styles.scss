@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --font-main: 'Montserrat', sans-serif;
+  --font-secondary: 'MuseoModerno', sans-serif;
+
+  /* CORES */
+  --color-accents-red: #FF383C;
+  --color-neutral-1: #FFFFFF;
+  --color-grays-black: #000000;
+}
+
+/* 1. Use uma box-sizing mais intuitiva */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remova as margens padrão e defina a altura da linha */
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+/* 3. Melhore a legibilidade do texto */
+body {
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  font-family: var(--font-main);
+}
+
+/* 4. Garanta que imagens e media sejam responsivas */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Remova estilos padrão de formulários */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Evite quebra de palavras longas */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.button {
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  border-radius: 16px;
+}
+.btn-primary {
+  background-color: var(--color-grays-black);
+  color: var(--color-neutral-1);
+}
+
+.btn-secondary {
+  background-color: var(--color-accents-red);
+  color: var(--color-neutral-1);
+}
+
+.btn-outlined {
+  background-color: transparent;
+  border: 1px solid var(--color-grays-black);
+  color: var(--color-grays-black);
+}
+
+.max-width {
+  max-width: 80vw;
+  margin: auto;
+}

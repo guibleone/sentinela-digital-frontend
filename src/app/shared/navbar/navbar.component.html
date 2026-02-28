@@ -1,0 +1,14 @@
+<header class="max-width">
+  <div class="titulo">
+    <img ngSrc="icons/lock.svg" width="30" height="30" />
+    <h1>Sentinela Digital</h1>
+  </div>
+  <nav>
+    <ul>
+      @for (link of navLinks; track $index) {
+      <li><a class="link" [routerLink]="link.path">{{link.titulo}}</a></li>
+      }
+    </ul>
+  </nav>
+  <button class="button btn-secondary">Denunciar</button>
+</header>
