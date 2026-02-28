@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.titulo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.titulo>h1 {
+  font-family: var(--font-secondary);
+  font-size: 24px;
+}
+
+nav>ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.link {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: underline;
+}
