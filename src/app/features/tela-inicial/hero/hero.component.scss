@@ -1,0 +1,25 @@
+section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 72px 0;
+}
+
+.texto-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.texto-principal > h1 {
+  font-size: 48px;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+.botoes {
+  display: flex;
+  gap: 8px;
+}
