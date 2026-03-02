@@ -1,0 +1,11 @@
+<article>
+  <img [ngSrc]="ataque.urlImagem" height="100" width="400">
+  <div class="conteudo">
+    <header>
+      <h1>{{ataque.titulo}}</h1>
+      <app-tag [texto]="ataque.categoria" [cor]="'vermelho'" />
+    </header>
+    <p>{{ataque.corpo}}</p>
+    <a [routerLink]="'/noticas/ataques/' + ataque.slug">saiba mais</a>
+  </div>
+</article>

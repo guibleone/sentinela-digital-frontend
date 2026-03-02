@@ -1,0 +1,15 @@
+<section class="container">
+
+  <div class="max-width conteudo">
+    <div class="paragrafo">
+      <h3>Proteja-se contra ameaças digitais</h3>
+      <h1>Criminosos utilizam estes Ataques</h1>
+    </div>
+
+    <div class="ataques">
+      @for (ataque of ataques; track ataque.slug) {
+      <app-ataque [ataque]="ataque" />
+      }
+    </div>
+  </div>
+</section>
