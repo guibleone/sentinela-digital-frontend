@@ -1,0 +1,13 @@
+.tag {
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.tag--vermelho {
+  background-color: var(--color-accents-red);
+  color: var(--color-neutral-1)
+}
