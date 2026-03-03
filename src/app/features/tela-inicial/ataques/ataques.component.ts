@@ -3,11 +3,10 @@ import { Noticia } from '../../../shared/models/noticia.model';
 import { NOTICIAS } from '../../../shared/data/noticias.data';
 import { Categoria } from '../../../shared/models/categoria.enum';
 import { AtaqueComponent } from '../ataque/ataque.component';
-import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: 'app-ataques',
-  imports: [AtaqueComponent, NgOptimizedImage],
+  imports: [AtaqueComponent],
   templateUrl: './ataques.component.html',
   styleUrl: './ataques.component.scss'
 })
