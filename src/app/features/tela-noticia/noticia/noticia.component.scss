@@ -1,0 +1,198 @@
+body {
+  position: relative;
+  max-width: 100%;
+  padding: 24px 0px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  body {
+    gap: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 60vw;
+    padding: 56px 0;
+    gap: 32px;
+  }
+}
+
+.breadcumb {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+}
+
+section {
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+header>h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+header>h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+/* Responsividade de Cabeçalho e Section */
+@media (min-width: 640px) {
+  section {
+    padding: 40px 24px;
+  }
+
+  header>h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  header>h3 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 56px 0;
+  }
+
+  header>h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  header>h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .informacoes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.logo {
+  border-radius: 999px;
+  border: 1px solid var(--color-grays-black);
+  display: flex;
+  width: fit-content;
+  padding: 8px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.data>p {
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 300;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+@media (min-width: 640px) {
+  .img-container {
+    height: 240px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .img-container {
+    height: 280px;
+  }
+}
+
+/* Nota: "markdown" geralmente é um componente, certifique-se de ser uma tag válida ou classe .markdown */
+markdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+@media (min-width: 640px) {
+  markdown {
+    gap: 20px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  markdown {
+    gap: 24px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.acoes>a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+@media (min-width: 640px) {
+  .acoes {
+    justify-content: space-between;
+  }
+
+  .acoes>a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .acoes>a {
+    font-size: 20px;
+  }
+}

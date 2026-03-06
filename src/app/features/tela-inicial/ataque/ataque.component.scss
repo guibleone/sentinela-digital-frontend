@@ -3,6 +3,13 @@ article {
   flex-direction: column;
   max-width: 100%;
   background-color: var(--color-neutral-1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
 }
 
 .conteudo {

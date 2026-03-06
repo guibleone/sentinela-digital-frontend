@@ -6,7 +6,7 @@ Frontend da plataforma **Sentinela Digital**, uma aplicação para denúncias, m
 
 A aplicação está disponível em:
 ```
-https://jolly-mud-00b9b361e.6.azurestaticapps.net
+https://sentinela-digital-frontend.vercel.app
 ```
 
 ## Tecnologias

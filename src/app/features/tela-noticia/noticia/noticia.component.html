@@ -1,0 +1,43 @@
+<section>
+  <header>
+    <div class="breadcumb">
+      <p class="inicio">Início</p>
+      /
+      <p class="final"><strong>{{noticia?.categoria}}</strong></p>
+    </div>
+    <h1>{{noticia?.titulo}}</h1>
+    <h3>{{noticia?.subTitulo}}</h3>
+    <div class="informacoes">
+      <div class="data">
+        <p>Por <span style="color: var(--color-polar-green-9);">{{noticia?.autor}}</span></p>
+        <p><strong>{{noticia?.criadoEm?.getDay()}}/{{noticia?.criadoEm?.getMonth()}}/{{noticia?.criadoEm?.getFullYear()}}
+            .
+            <span style="color: var(--color-polar-green-9);">Atualizado {{atualizadoEm}}</span></strong></p>
+      </div>
+      <div class="redes-sociais">
+        <div class="logo">
+          <img ngSrc="icons/whatsapp-logo.svg" width="20" height="20" />
+        </div>
+        <div class="logo">
+          <img ngSrc="icons/linkediin-logo.svg" width="20" height="18" />
+        </div>
+        <div class="logo">
+          <img ngSrc="icons/instagram-logo.svg" width="20" height="20" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="img-container">
+      <img style="object-fit: cover;" [ngSrc]="noticia?.urlImagem!" fill priority />
+    </div>
+    <markdown ngPreserveWhitespaces [data]="noticia?.corpo"></markdown>
+
+    <div class="acoes">
+      <a>
+        <img ngSrc="icons/chevron_backward.svg" alt="" width="30" height="30">Anterior</a>
+      <a>
+        Próximo<img ngSrc="icons/chevron_right.svg" alt="" width="30" height="30"></a>
+    </div>
+  </body>
+</section>
