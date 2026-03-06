@@ -1,6 +1,7 @@
 <article>
-  <img src="" alt="">
+  <img [ngSrc]="noticia.urlImagem" [alt]="noticia.titulo" height="168" width="150">
   <div class="texto-superior">
-    
+    <h3>{{noticia.titulo}}</h3>
+    <app-tag [texto]="noticia.categoria" [cor]="'vermelho'" />
   </div>
 </article>

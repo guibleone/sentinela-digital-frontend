@@ -1,4 +1,8 @@
 <section>
-  <h1>Mais de Sentinela Digital</h1>
-  
+  <div class="max-width">
+    <h1>Mais de Sentinela Digital</h1>
+    @for (noticia of noticiasRelacionadas; track $index) {
+    <app-card [noticia]="noticia" />
+    }
+  </div>
 </section>
