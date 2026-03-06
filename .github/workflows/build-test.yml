@@ -1,0 +1,36 @@
+name: CI Build and Test
+
+on:
+  workflow_dispatch: 
+  push:
+    branches-ignore:
+      - 'main'
+  pull_request:
+    branches-ignore:
+      - 'main'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9 # Ou a versão que você utiliza
+
+      - name: Instalar dependências
+        run: pnpm install
+
+      - name: Rodar Build
+        run: pnpm run build
+
+      # - name: Rodar Testes
+      #   run: pnpm test

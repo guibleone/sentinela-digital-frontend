@@ -1,4 +1,4 @@
-<article>
+<article (click)="acessarAtaque(ataque)">
   <img [ngSrc]="ataque.urlImagem" height="100" width="400">
   <div class="conteudo">
     <header>
@@ -6,6 +6,6 @@
       <app-tag [texto]="ataque.categoria" [cor]="'vermelho'" />
     </header>
     <p>{{ataque.corpo}}</p>
-    <a [routerLink]="'/noticas/ataques/' + ataque.slug">saiba mais</a>
+    <a [routerLink]="['/noticias', ataque.categoria.toLowerCase(), ataque.slug]">saiba mais</a>
   </div>
 </article>

@@ -1,0 +1,13 @@
+<article>
+  <div class="img-container">
+    <img style="object-fit: cover;" [ngSrc]="noticia.urlImagem" [alt]="noticia.titulo" fill priority>
+  </div>
+  <div class="conteudo">
+    <div class="texto-superior">
+      <h3>{{noticia.titulo}}</h3>
+      <app-tag [texto]="noticia.categoria" [cor]="'vermelho'" />
+    </div>
+    <p>{{noticia.corpo | stripMarkdown}}</p>
+    <a href="">saiba mais</a>
+  </div>
+</article>

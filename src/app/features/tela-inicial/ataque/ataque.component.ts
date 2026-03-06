@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Noticia } from '../../../shared/models/noticia.model';
 import { NgOptimizedImage } from '@angular/common';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { TagComponent } from "../../../shared/components/tag/tag.component";
 
 @Component({
@@ -12,5 +12,11 @@ import { TagComponent } from "../../../shared/components/tag/tag.component";
 })
 export class AtaqueComponent {
   @Input({ required: true }) ataque!: Noticia;
+
+  router: Router = inject(Router);
+
+  acessarAtaque(ataque: Noticia) {
+    this.router.navigate(['/noticias', ataque.categoria.toLowerCase(), ataque.slug]);
+  }
 
 }
