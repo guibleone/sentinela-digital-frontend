@@ -5,7 +5,7 @@ import { RouterLink } from "@angular/router";
 export interface Link {
   path: string;
   titulo: string;
-  icon: string;
+  icon?: string;
 }
 
 @Component({

@@ -8,6 +8,6 @@
       <app-tag [texto]="noticia.categoria" [cor]="'vermelho'" />
     </div>
     <p>{{noticia.corpo | stripMarkdown}}</p>
-    <a href="">saiba mais</a>
+    <a [routerLink]="['/noticias', noticia.categoria.toLowerCase(), noticia.slug]">saiba mais</a>
   </div>
 </article>

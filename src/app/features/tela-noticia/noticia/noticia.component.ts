@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Signal } from '@angular/core';
 import { Noticia } from '../../../shared/models/noticia.model';
 import { NgOptimizedImage } from '@angular/common';
 import { MarkdownModule } from 'ngx-markdown';
@@ -10,7 +10,7 @@ import { MarkdownModule } from 'ngx-markdown';
   styleUrl: './noticia.component.scss'
 })
 export class NoticiaComponent implements OnInit {
-  @Input({ required: true }) noticia: Noticia | undefined;
+  @Input({ required: true }) noticia: Noticia | undefined
 
   atualizadoEm!: string;
 

@@ -1,0 +1,31 @@
+<footer>
+  <div class="container">
+    <div class="title">
+      <img src="icons/lock.svg" alt="Ícone do site de um cadeado">
+      <h1>Sentinela Digital</h1>
+    </div>
+    <p>Proteja-se na internet</p>
+  </div>
+
+  <div class="links">
+    @for (grupoLink of gruposLink; track $index) {
+    <div class="grupo-link">
+      <h1>{{grupoLink.titulo}}</h1>
+      <ul>
+        @for (link of grupoLink.links; track $index) {
+        <a [routerLink]="link.path">{{link.titulo}}</a>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+
+  <div class="newsletter">
+    <h3>Inscreva-se na newsletter</h3>
+    <div class="input">
+      <input type="text" name="" id="" placeholder="email@gmail.com">
+      <img src="icons/stacked_email.svg" alt="">
+    </div>
+    <p>Receba notícias e dicas de segurança na sua caixa de entrada.</p>
+  </div>
+</footer>

@@ -5,7 +5,7 @@
       <h1>{{ataque.titulo}}</h1>
       <app-tag [texto]="ataque.categoria" [cor]="'vermelho'" />
     </header>
-    <p>{{ataque.corpo}}</p>
+    <p>{{ataque.corpo | stripMarkdown}}</p>
     <a [routerLink]="['/noticias', ataque.categoria.toLowerCase(), ataque.slug]">saiba mais</a>
   </div>
 </article>
