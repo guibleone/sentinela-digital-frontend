@@ -27,7 +27,7 @@
       <ul>
         @for (link of navLinks; track $index) {
         <li>
-          <img class="icon" [ngSrc]="link.icon" width="20" height="20" />
+          <img class="icon" [ngSrc]="link.icon!" width="20" height="20" />
           <a class="link" [routerLink]="link.path">{{link.titulo}}</a>
         </li>
         }

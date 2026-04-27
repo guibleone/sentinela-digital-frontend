@@ -3,10 +3,11 @@ import { Noticia } from '../../../shared/models/noticia.model';
 import { NgOptimizedImage } from '@angular/common';
 import { Router, RouterLink } from "@angular/router";
 import { TagComponent } from "../../../shared/components/tag/tag.component";
+import { StripMarkdownPipe } from '../../../core/pipes/strip-markdown.pipe';
 
 @Component({
   selector: 'app-ataque',
-  imports: [NgOptimizedImage, RouterLink, TagComponent],
+  imports: [NgOptimizedImage, RouterLink, TagComponent, StripMarkdownPipe],
   templateUrl: './ataque.component.html',
   styleUrl: './ataque.component.scss'
 })
