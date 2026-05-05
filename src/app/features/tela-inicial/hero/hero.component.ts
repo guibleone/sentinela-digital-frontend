@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -8,5 +9,11 @@ import { NgOptimizedImage } from '@angular/common'
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+
+  private router = inject(Router);
+
+  public navigateTo(url: string) {
+    this.router.navigate(["/" + url])
+  }
 
 }

@@ -18,9 +18,9 @@ export class NavbarComponent {
   isDrawerOpen = false;
 
   navLinks: Link[] = [
-    { path: '/', titulo: 'Ataques', icon: 'icons/threat_intelligence.svg' },
-    { path: '/', titulo: 'Dicas de Segurança', icon: 'icons/lightbulb.svg' },
-    { path: '/', titulo: 'Golpes', icon: 'icons/phishing.svg' },
+    { path: '/noticias', titulo: 'Ataques', icon: 'icons/threat_intelligence.svg' },
+    { path: '/noticias', titulo: 'Dicas de Segurança', icon: 'icons/lightbulb.svg' },
+    { path: '/simulador-golpes', titulo: 'Golpes', icon: 'icons/phishing.svg' },
   ]
 
   toggleDrawer() {
