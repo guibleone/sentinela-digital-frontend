@@ -4,19 +4,28 @@
     <h1>Aprenda a se <u><strong>proteger</strong></u></h1>
   </div>
   <div class="questoes">
-    <p>Questão <strong>1 / 10</strong></p>
+    <p>Questão <strong>{{ index + 1 }} / {{ perguntas.length }}</strong></p>
   </div>
   <div class="questao">
     <p>
-       Você recebe uma mensagem de um número desconhecido. A pessoa usa a foto do seu filho e diz: "Oi pai/mãe, meu celular quebrou e estou usando este número provisório. Pode me transferir R$ 800 para pagar o conserto? Amanhã eu te devolvo.
+      {{ perguntaAtual.texto }}
     </p>
   </div>
   <div class="acoes-resposta">
-    <button>SEGURO</button>
-    <button>GOLPE</button>
+    <button (click)="responder(false)" [disabled]="respostas[index] !== null">SEGURO</button>
+    <button (click)="responder(true)" [disabled]="respostas[index] !== null">GOLPE</button>
+  </div>
+  <div class="feedback" *ngIf="respostas[index] !== null">
+    <p *ngIf="respostas[index] === perguntaAtual.corretoEhGolpe" class="certo">Correto!</p>
+    <p *ngIf="respostas[index] !== perguntaAtual.corretoEhGolpe" class="errado">Errado.</p>
+  </div>
+  <div class="resultado" *ngIf="terminou()">
+    <h2>Fim do simulador</h2>
+    <p>Sua pontuação: <strong>{{ pontuacao }} / {{ perguntas.length }}</strong></p>
+    <button (click)="reiniciar()">Reiniciar</button>
   </div>
   <div class="navegacao">
-   <a href="">Anterior</a>
-   <a href="">Próximo</a>
+    <a (click)="anterior()" class="link">Anterior</a>
+    <a (click)="proximo()" class="link">Próximo</a>
   </div>
 </section>
